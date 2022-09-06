@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ProductComponent from "./ProductComponent";
 import { useDispatch, useSelector } from "react-redux";
-import { productActions, setProducts } from "../redux/actions/productActions";
+import { setProducts } from "../redux/actions/productActions";
 import axios from "axios";
 
 function ProductListing() {
@@ -13,6 +13,7 @@ function ProductListing() {
       .get("https://fakestoreapi.com/products")
       .catch((err) => console.log("Err", err));
     dispatch(setProducts(response.data));
+    // console.log(response.data)
   };
 
   useEffect(() => {
