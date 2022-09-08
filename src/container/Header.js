@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className='ui fixed menu'>
         <div className="ui container centered">
-            <h2>Fake Shop</h2>
+            <h2><a href="/" style={{textDecoration:"none",color:"black"}}>Fake Shop</a></h2>
         </div>
     </div>
   )
